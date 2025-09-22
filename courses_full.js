@@ -3,6 +3,6 @@
     .concat(COURSES_CORE2)
     .concat(COURSES_ELECGEN)
     .concat(COURSES_ELEC1)
-    .concat(COURSES_ELEC2)
+    .concat(COURSES_ELEC3)
     .concat(COURSES_FUND)
     .concat(COURSES_OTHERS);
