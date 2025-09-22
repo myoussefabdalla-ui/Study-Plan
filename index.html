@@ -42,10 +42,27 @@
     align-items:center;
     margin-bottom:12px;
   }
-  header h1{ margin:0; font-size:18px; }
+  header h1{ margin:0; font-size:24px; }
   .controls{ margin-left:auto; display:flex; gap:8px; align-items:center; }
   button,input{ padding:8px 10px; border-radius:6px; border:1px solid #cfd8e3; background:white; cursor:pointer; }
   .layout{ display:flex; gap:12px; align-items:flex-start; }
+
+  .site-footer {
+  background: #f1f5f9; /* light grey-blue */
+  padding: 16px;
+  text-align: left;
+  font-size: 13px;
+  color: #334155; /* slate */
+  border-top: 1px solid #cbd5e1;
+  margin-top: 20px;
+}
+
+.site-footer .disclaimer {
+  font-size: 14px;
+  color: #475569; /* slightly darker slate */
+  margin-top: 8px;
+  line-height: 1.5;
+}
 
   /* semesters grid */
   .semesters{
@@ -157,6 +174,8 @@
 <body>
 <main>
   <header>
+    <!-- Left logo -->
+    <img src="univ_logo.jpg" alt="Left Logo" class="logo left">
     <h1>Study Plan — Electronics & Comm., Faculty of Eng., Cairo University</h1>
     <div class="controls">
       <label>Max credits:
@@ -172,7 +191,8 @@
      style="font-size:18px; font-weight:bold; margin-left:20px;">
     Total Credits: 0
     </div>
-
+    <!-- Right logo -->
+    <img src="fac_logo.jpg" alt="Right Logo" class="logo right">
   </header>
 
   <div class="layout">
@@ -202,6 +222,14 @@
 </aside>
 
   </div>
+  <footer class="site-footer">
+  <p>&copy; Dr. Mohamed Youssef</p>
+  <p class="disclaimer">
+    This webpage was created to help Electronics & Communication Students at the Faculty of Engineering, Cairo University generate their study plan. 
+    Students are responsible to review their program requirements and consult with their academic faculty advisors and administrators.
+  </p>
+</footer>
+
 </main>
 
 <div id="tooltip" class="tooltip"></div>
