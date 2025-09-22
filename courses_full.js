@@ -6,3 +6,4 @@
     .concat(COURSES_ELEC3)
     .concat(COURSES_FUND)
     .concat(COURSES_OTHERS);
+
