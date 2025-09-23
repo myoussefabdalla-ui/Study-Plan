@@ -7,3 +7,4 @@
     .concat(COURSES_FUND)
     .concat(COURSES_OTHERS);
 
+
