@@ -560,7 +560,7 @@ document.getElementById('savePdfBtn').addEventListener('click', savePlanToPDF);
 
 
 /* -------------------
-   Init-Default Study Plan
+   Init - Default Study Plan
    ------------------- */
 
 function loadDefaultPlan(planChoice) {
@@ -588,18 +588,22 @@ function loadDefaultPlan(planChoice) {
   updateTotalCredits();
 }
 
- 
-/* -------------------
-   Init
-   ------------------- */
-
- document.getElementById('defaultPlanSelect').addEventListener('change', (e) => {
+// Handle dropdown changes
+document.getElementById('defaultPlanSelect').addEventListener('change', (e) => {
   loadDefaultPlan(e.target.value);
 });
 
-// Load default (9 semesters) on page load
+// -------------------
+// Init (on page load)
+// -------------------
+
+// Set the dropdown to 9 semesters by default
+document.getElementById('defaultPlanSelect').value = "9";
+
+// Load the default 9-semester plan
 loadDefaultPlan("9");
- 
+
+// Other event listeners
 document.getElementById('maxCredits').addEventListener('change',()=>{ 
   maxCredits=parseInt(document.getElementById('maxCredits').value,10)||21; 
   for(let s=1;s<=NUM_SEM;s++) updateBadge(s);
@@ -613,6 +617,7 @@ document.getElementById('categorySelect').addEventListener('change', renderCours
 </script>
 </body>
 </html>
+
 
 
 
