@@ -600,11 +600,6 @@ function loadDefaultPlan(planChoice) {
 // Load default (9 semesters) on page load
 loadDefaultPlan("9");
  
-renderSemesters(); renderCourseList();
-for(let s=1;s<=NUM_SEM;s++) updateBadge(s);
-updateTotalCredits();
-checkProgramRequirements();
-
 document.getElementById('maxCredits').addEventListener('change',()=>{ 
   maxCredits=parseInt(document.getElementById('maxCredits').value,10)||21; 
   for(let s=1;s<=NUM_SEM;s++) updateBadge(s);
@@ -618,6 +613,7 @@ document.getElementById('categorySelect').addEventListener('change', renderCours
 </script>
 </body>
 </html>
+
 
 
 
