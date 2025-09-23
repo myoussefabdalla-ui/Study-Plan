@@ -17,6 +17,7 @@
 <script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan@main/courses_fundamental.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan@main/courses_others.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan@main/courses_full.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan@main/default_plans.js"></script>
   
 <style>
   :root{
@@ -194,6 +195,16 @@
     </div>
     <!-- Right logo -->
     <img src="fac_logo.jpg" alt="Right Logo" class="logo right">
+
+   <label>Default Plan:
+  <select id="defaultPlanSelect">
+    <option value="8">8 Semesters</option>
+    <option value="9">9 Semesters</option>
+    <option value="10" selected>10 Semesters</option>
+  </select>
+  </label>
+
+   
   </header>
 
   <div class="layout">
@@ -547,9 +558,48 @@ function savePlanToPDF() {
 
 document.getElementById('savePdfBtn').addEventListener('click', savePlanToPDF);
 
+
+/* -------------------
+   Init-Default Study Plan
+   ------------------- */
+
+function loadDefaultPlan(planChoice) {
+  let chosenPlan;
+  if (planChoice === "8") {
+    chosenPlan = DEFAULT_PLAN_8;
+    NUM_SEM = 8;
+  } else if (planChoice === "9") {
+    chosenPlan = DEFAULT_PLAN_9;
+    NUM_SEM = 9;
+  } else {
+    chosenPlan = DEFAULT_PLAN_10;
+    NUM_SEM = 10;
+  }
+
+  // Deep copy into `plan`
+  plan = JSON.parse(JSON.stringify(chosenPlan));
+
+  // Re-render semesters
+  renderSemesters();
+  for (let s = 1; s <= NUM_SEM; s++) refreshSemester(s);
+
+  renderCourseList();
+  checkProgramRequirements();
+  updateTotalCredits();
+}
+
+ 
 /* -------------------
    Init
    ------------------- */
+
+ document.getElementById('defaultPlanSelect').addEventListener('change', (e) => {
+  loadDefaultPlan(e.target.value);
+});
+
+// Load default (9 semesters) on page load
+loadDefaultPlan("9");
+ 
 renderSemesters(); renderCourseList();
 for(let s=1;s<=NUM_SEM;s++) updateBadge(s);
 updateTotalCredits();
@@ -568,6 +618,7 @@ document.getElementById('categorySelect').addEventListener('change', renderCours
 </script>
 </body>
 </html>
+
 
 
 
