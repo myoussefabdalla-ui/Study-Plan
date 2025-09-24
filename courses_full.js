@@ -5,3 +5,4 @@
     .concat(COURSES_ELEC1)
     .concat(COURSES_ELEC3)
     .concat(COURSES_FUND);
+
