@@ -12,6 +12,7 @@ const DEFAULT_PLAN_8 = [
   [],                                                                                         // Semester 9
   []                                                                                          // Semester 10
 ];
+
 const DEFAULT_PLAN_9 = [
   ["MTHG001", "PHYG001", "AMTG001", "AMTG005", "MTHG002", "CHEG001", "GENGxxx"],   // Semester 1
   ["MTHG003", "PHYG002", "AMTG002", "INTG001", "ENGG001", "GENGxxx2"],             // Semester 2
@@ -36,3 +37,4 @@ const DEFAULT_PLAN_10 = [
   ["EECG461","EECG471","GENG118","EECGxxx-1","EECGxxx-2","EECGxxx-3"],             // Semester 9
   ["EECG472","EECGxxx-4","EECGxxx-5"]                                              // Semester 10
 ];
+
