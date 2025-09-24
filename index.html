@@ -194,7 +194,7 @@
     <!-- Right logo -->
     <img src="fac_logo.jpg" alt="Right Logo" class="logo right">
 
-   <label>Default Plan:
+  <label>Default Plan:
   <select id="defaultPlanSelect">
     <option value="8">8 Semesters</option>
     <option value="9">9 Semesters</option>
@@ -202,7 +202,6 @@
   </select>
   </label>
 
-   
   </header>
 
   <div class="layout">
@@ -508,6 +507,7 @@ function saveToExcel(){
   const a=document.createElement('a'); a.href=url; a.download='study-plan.xlsx'; a.click();
   URL.revokeObjectURL(url);
 }
+
 function loadFromExcel(file) {
   const reader = new FileReader();
   reader.onload = e => {
@@ -560,6 +560,8 @@ function loadFromExcel(file) {
   reader.readAsArrayBuffer(file);
 }
 
+
+
 /* -------------------
    Reset
    ------------------- */
@@ -586,7 +588,6 @@ function savePlanToPDF() {
 }
 
 document.getElementById('savePdfBtn').addEventListener('click', savePlanToPDF);
-
 
 /* -------------------
    Init - Default Study Plan
@@ -643,27 +644,7 @@ document.getElementById('fileInput').addEventListener('change',ev=>{ if(ev.targe
 document.getElementById('resetBtn').addEventListener('click',resetPlan);
 document.getElementById('categorySelect').addEventListener('change', renderCourseList);
 
+
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
