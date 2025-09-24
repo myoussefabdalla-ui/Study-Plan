@@ -9,6 +9,7 @@ const COURSES_ELECGEN = [
     "textbook": "",
     "semester": "FALL"
   },
+  
   {
     "code": "GENG116",
     "name": "Code of Ethics",
@@ -30,3 +31,4 @@ const COURSES_ELECGEN = [
     "semester": "FALL"
   }
 ];
+
