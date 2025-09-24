@@ -15,7 +15,7 @@
 <!--<script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan@main/courses_elec2.js"></script> -->
 <script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan@main/courses_elec3.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan@main/courses_fundamental.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan@main/courses_others.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan@main/courses_others.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan@main/courses_full.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan@main/default_plans.js"></script>
   
@@ -410,13 +410,13 @@ function attemptPlaceCourse(code,semNum){
   if(!c) return false;
 
   // --- NEW RULE: Semester Availability ---
-  const isOdd = semNum % 2 === 1;  // odd = FALL, even = WINTER
+  const isOdd = semNum % 2 === 1;  // odd = FALL, even = SPRING
   if(c.semester === "FALL" && !isOdd){
     showMessage(`❌ Cannot add ${c.code}: offered only in FALL semesters.`,true);
     return false;
   }
-  if(c.semester === "WINTER" && isOdd){
-    showMessage(`❌ Cannot add ${c.code}: offered only in WINTER semesters.`,true);
+  if(c.semester === "SPRING" && isOdd){
+    showMessage(`❌ Cannot add ${c.code}: offered only in SPRING semesters.`,true);
     return false;
   }
   // BOTH courses are always allowed
@@ -510,23 +510,54 @@ function saveToExcel(){
   const a=document.createElement('a'); a.href=url; a.download='study-plan.xlsx'; a.click();
   URL.revokeObjectURL(url);
 }
-function loadFromExcel(file){
-  const reader=new FileReader();
-  reader.onload=e=>{
-    const data=new Uint8Array(e.target.result);
-    const wb=XLSX.read(data,{type:'array'});
-    const sheet=wb.Sheets[wb.SheetNames[0]];
-    const arr=XLSX.utils.sheet_to_json(sheet,{header:1});
-    plan=Array.from({length:NUM_SEM},()=>[]);
-    arr.slice(1).forEach(row=>{
-      const sem=row[0]?.match(/(\d+)/); const code=row[1];
-      if(sem && code){ plan[parseInt(sem[1])-1].push(code); }
+function loadFromExcel(file) {
+  const reader = new FileReader();
+  reader.onload = e => {
+    const data = new Uint8Array(e.target.result);
+    const wb = XLSX.read(data, { type: 'array' });
+    const sheet = wb.Sheets[wb.SheetNames[0]];
+    const arr = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+    // Reset plan
+    plan = Array.from({ length: NUM_SEM }, () => []);
+
+    let violations = [];
+
+    // Try placing courses using the same logic as drag & drop
+    arr.slice(1).forEach(row => {
+      const sem = row[0]?.match(/(\d+)/);
+      const code = row[1];
+      if (sem && code) {
+        const semNum = parseInt(sem[1]);
+        if (courseMap[code]) {
+          const placed = attemptPlaceCourse(code, semNum);
+          if (!placed) {
+            violations.push(
+              `${code} could not be placed in Semester ${semNum} due to: 
+               wrong semester availability, missing prerequisites, 
+               or credit overload.`
+            );
+          }
+        }
+      }
     });
-    renderSemesters(); for(let s=1;s<=NUM_SEM;s++) refreshSemester(s);
+
+    // Re-render UI
+    renderSemesters();
+    for (let s = 1; s <= NUM_SEM; s++) refreshSemester(s);
     renderCourseList();
-    updateTotalCredits();
     checkProgramRequirements();
-    showMessage("✅ Plan loaded from Excel",false);
+    updateTotalCredits();
+
+    // Show messages if violations occurred
+    if (violations.length) {
+      showMessage("⚠️ Issues found:\n" + violations.join("\n"), true);
+    } else {
+      showMessage("✅ Plan loaded from Excel", false);
+    }
+
+    // Reset file input value so the same file can be loaded again
+    document.getElementById('fileInput').value = "";
   };
   reader.readAsArrayBuffer(file);
 }
@@ -617,6 +648,7 @@ document.getElementById('categorySelect').addEventListener('change', renderCours
 </script>
 </body>
 </html>
+
 
 
 
