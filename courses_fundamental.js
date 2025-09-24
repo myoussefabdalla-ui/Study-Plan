@@ -206,4 +206,5 @@ const COURSES_FUND = [
     semester: "BOTH",
     description: ""
   }
+
 ];
