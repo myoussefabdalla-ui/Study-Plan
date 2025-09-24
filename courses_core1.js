@@ -17,7 +17,7 @@ const COURSES_CORE1 = [
     "prereqs": ["EECG111","MTHG102"],
     "description": "Coupled Circuits – Transformers Equivalent Circuits and Phasor Diagrams – Ideal Transformers – Three- Phase Circuits – Series and Parallel Resonance Circuits – RLC Filters – Two-port Networks – Two ports embedded in a Larger Network – Circuit Simulators.",
     "textbook": "J. W. Nilsson and S. Riedel, Electric Circuits, Pearson, 11th edition, 2019",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "EECG122",
@@ -27,7 +27,7 @@ const COURSES_CORE1 = [
     "prereqs": ["EECG111","PHYG102"],
     "description": "Introduction to electronics devices – PN Junction – BJT – MOS Capacitor – MOST – Diode Circuits – Introduction to MOST and BJT – MOST and BJT biasing circuits and current mirrors – Introduction to amplifier circuits using MOST and BJT – Active Load (clear emphasis on MOST circuits).",
     "textbook": "A. S. Sedra, K. C. Smith, Microelectronic Circuits, Oxford, 7th Edition, 2014",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "EECG141",
@@ -47,7 +47,7 @@ const COURSES_CORE1 = [
     "prereqs": ["AMTG005"],
     "description": "Pointers and Dynamic Allocation – Sorting and Searching Algorithms – Program Efficiency and Analysis of Algorithms – Data Structures and Abstract Data Types – C++ Classes & Structures – Templates – Linear Lists – Linked Lists – Stacks and Queues – Tables, Hashing, and Fast Retrieval – Binary Trees – Software Design Approaches.",
     "textbook": "M. Berman, Data structure Via C++ Objects by Evolution, Oxford University 2007; Herbert Schildt, C++ from the ground up, McGraw Hill, 4th edition, 2014",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "EECG171",
@@ -87,7 +87,7 @@ const COURSES_CORE1 = [
     "prereqs": ["EECG221"],
     "description": "Introduction to Integrated Circuits Technology – IC Fabrication – MOSFET as Switches – Ratioed Logic Families – CMOS Gates – Delay in CMOS – Design using Logical Effort – Dynamic CMOS – CMOS Latches and Registers – Synchronous Pipelines.",
     "textbook": "J. M. Rabae, Digital Integrated Circuits 2nd Ed., Prentice Hall, 2003; K. Abbas, Handbook of Digital CMOS Technology, Circuits, and Systems, Springer, 2020",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "EECG231",
@@ -107,7 +107,7 @@ const COURSES_CORE1 = [
     "prereqs": ["EECG231"],
     "description": "Amplitude Modulation – Frequency and Phase Modulation – Frequency Division Multiplexing – Introduction to Digital Modulation Techniques – Pulse Amplitude Modulation (PAM), Pulse Coded Modulation (PCM), Time Division Multiplexing (TDM) – Delta Modulation (DM) – Differential PCM – Performance of Analog Modulation Techniques – Random Processes – Baseband Pulse Transmission – Matched Filters – Inter-symbol Interference.",
     "textbook": "B. Lathi, Modern Digital and Analog Communication, Oxford, 5th Edition, 2018",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "EECG241",
@@ -127,7 +127,7 @@ const COURSES_CORE1 = [
     "prereqs": ["EECG142"],
     "description": "Importance and Applications of Embedded Systems – Toolchains, Memory Regions and Linking – Bootloader Operation – Program Architecture: Bare-metal vs RTOS, Super-loop vs Event-based – I/O Processing and Interrupt Handling – Multi-Tasking: Threads, Communication, Locking, Mutual Exclusion, Timers, and Queues – File Systems – Memory Management – Testing of Embedded Systems.",
     "textbook": "X. Fan, Real-Time Embedded Systems Design Principles and Engineering Practices, Elsevier 2015",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "EECG252",
@@ -137,7 +137,7 @@ const COURSES_CORE1 = [
     "prereqs": ["MTHG202","PHYG101"],
     "description": "Static Electric Fields – Static Magnetic Fields – Steady Currents – Time-varying Fields – EM Wave Propagation in Unbounded Media – Reflection and Transmission of EM Waves.",
     "textbook": "D. Cheng, Field and Wave Electromagnetics, Addison-Wesley, 1983",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "EECG271",

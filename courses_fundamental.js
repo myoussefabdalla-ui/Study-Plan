@@ -68,7 +68,7 @@ const COURSES_FUND = [
     credits: 3,
     category: "Fundamental",
     prereqs: [],
-    semester: "WINTER",
+    semester: "SPRING",
     description: ""
   },
   {
@@ -77,7 +77,7 @@ const COURSES_FUND = [
     credits: 3,
     category: "Fundamental",
     prereqs: [],
-    semester: "WINTER",
+    semester: "SPRING",
     description: ""
   },
   {
@@ -86,7 +86,7 @@ const COURSES_FUND = [
     credits: 3,
     category: "Fundamental",
     prereqs: [],
-    semester: "WINTER",
+    semester: "SPRING",
     description: ""
   },
   {
@@ -95,7 +95,7 @@ const COURSES_FUND = [
     credits: 2,
     category: "Fundamental",
     prereqs: [],
-    semester: "WINTER",
+    semester: "SPRING",
     description: ""
   },
   {
@@ -104,7 +104,7 @@ const COURSES_FUND = [
     credits: 3,
     category: "Fundamental",
     prereqs: [],
-    semester: "WINTER",
+    semester: "SPRING",
     description: ""
   },
   {
@@ -113,7 +113,7 @@ const COURSES_FUND = [
     credits: 2,
     category: "UniversityRequirement",
     prereqs: [],
-    semester: "WINTER",
+    semester: "SPRING",
     description: ""
   },
   {
@@ -149,7 +149,7 @@ const COURSES_FUND = [
     credits: 3,
     category: "Fundamental",
     prereqs: [],
-    semester: "WINTER",
+    semester: "SPRING",
     description: ""
   },
   {
@@ -158,7 +158,7 @@ const COURSES_FUND = [
     credits: 2,
     category: "Fundamental",
     prereqs: [],
-    semester: "WINTER",
+    semester: "SPRING",
     description: ""
   },
   {
@@ -167,7 +167,7 @@ const COURSES_FUND = [
     credits: 2,
     category: "Fundamental",
     prereqs: [],
-    semester: "WINTER",
+    semester: "SPRING",
     description: ""
   },
   {
@@ -185,16 +185,7 @@ const COURSES_FUND = [
     credits: 2,
     category: "UniversityRequirement",
     prereqs: [],
-    semester: "WINTER",
-    description: ""
-  },
-  {
-    code: "EECG281",
-    name: "Industrial Training",
-    credits: 1,
-    category: "Core",
-    prereqs: [],
-    semester: "WINTER",
+    semester: "SPRING",
     description: ""
   },
   {
@@ -203,7 +194,7 @@ const COURSES_FUND = [
     credits: 1,
     category: "UniversityRequirement",
     prereqs: [],
-    semester: "WINTER",
+    semester: "BOTH",
     description: ""
   },
   {
@@ -212,7 +203,7 @@ const COURSES_FUND = [
     credits: 2,
     category: "UniversityRequirement",
     prereqs: [],
-    semester: "WINTER",
+    semester: "BOTH",
     description: ""
   }
 ];

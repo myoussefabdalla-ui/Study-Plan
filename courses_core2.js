@@ -37,7 +37,7 @@ const COURSES_CORE2 = [
     "prereqs": ["MTHG103"],
     "description": "Overview of Computer Networks – Circuit Switching – Packet Switching – The Way Networks Work and Example Protocols – Telephony Networks – The Internet Architecture and Protocols – Routing – Transport Layer Protocols: TCP and UDP – Sliding Window Protocols – Media Access Control Protocols – Local Area Networks Architecture, Protocols and Performance.",
     "textbook": "J. F. Kurose and K. W. Ross, Computer Networking: A Top-Down Approach Featuring the Internet, 8th Edition, Pearson, 2021",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "EECG351",
@@ -57,7 +57,7 @@ const COURSES_CORE2 = [
     "prereqs": ["EECG351"],
     "description": "Propagation in Conducting Cylindrical Waveguides – Rectangular Waveguides – Propagation in Grounded Slabs – Cavity Resonators – Excitation of Guided Modes – Antennas as a Component in Wireless Systems – Basic Antenna Parameters – Antenna Types and Modeling Techniques – Antennas in Receive Mode – Antenna Arrays.",
     "textbook": "D. Pozar, Microwave Engineering, Wiley, 4th Edition, 2011; C. Balanis, Antenna Theory: Analysis and Design, Wiley, 4th edition, 2016",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "EECG361",
@@ -77,7 +77,7 @@ const COURSES_CORE2 = [
     "prereqs": ["EECG361"],
     "description": "Design of Control Systems – Control Systems Analysis and Design using PID Controller – Ziegler Nichols Tuning Method – Root Locus Analysis and Design – Compensation using Root Locus – Frequency Response Methods – Bode Plot Analysis and Design – Lead-lag Compensator Design – Sensitivity Analysis – Control system design using MatLab – Introduction to Fractional-order PID controller using MatLab.",
     "textbook": "F. Golnaraghi and B. C. Kuo, Automatic Control Systems, 10th Edition, McGraw-Hill Education, 2017; K. Ogata, Modern Control Engineering, 5th Edition, Pearson, 2010",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "EECG371",

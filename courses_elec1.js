@@ -7,7 +7,7 @@ const COURSES_ELEC1 = [
     "prereqs": ["EECG112"],
     "description": "Introduction to Electrical Power Systems – Generation, transmission and distribution of electrical power – Basics of DC and AC Circuits – Balanced 3-phase AC circuits – Basics of Transformers – Electromechanical Energy conversion – DC motors – Induction Motors – Synchronous Generators – Special Motors: Stepper motor – PM motors – Introduction to Power Electronics – Applications: UPS – Electric Vehicle – Elevators and Hoists",
     "textbook": "",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "MEPG175",
@@ -17,6 +17,6 @@ const COURSES_ELEC1 = [
     "prereqs": ["PHY001"],
     "description": "Introduction – Basics of thermodynamics– Conduction – Convection – Radiation – Electronics Cooling Methods – Heat sinks – Data centre cooling – Basics of thermal management of electronics – Design methods",
     "textbook": "",
-    "semester": "WINTER"
+    "semester": "SPRING"
   }
 ];

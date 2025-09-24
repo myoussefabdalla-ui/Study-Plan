@@ -17,7 +17,7 @@ const COURSES_ELECGEN = [
     "prereqs": [],
     "description": "",
     "textbook": "",
-    "semester": "WINTER"
+    "semester": "SPRING"
   },
   {
     "code": "GENG118",
@@ -28,35 +28,5 @@ const COURSES_ELECGEN = [
     "description": "",
     "textbook": "",
     "semester": "FALL"
-  },
-  {
-    "code": "GENG224",
-    "name": "Introduction to Accounting",
-    "credits": 2,
-    "category": "UniversityRequirement",
-    "prereqs": [],
-    "description": "",
-    "textbook": "",
-    "semester": "FALL"
-  },
-  {
-    "code": "GENG242",
-    "name": "Technical & Scientific Writing",
-    "credits": 2,
-    "category": "UniversityRequirement",
-    "prereqs": [],
-    "description": "",
-    "textbook": "",
-    "semester": "WINTER"
-  },
-  {
-    "code": "GENG245",
-    "name": "Fundamentals of Safety and Risk Management",
-    "credits": 2,
-    "category": "UniversityRequirement",
-    "prereqs": [],
-    "description": "",
-    "textbook": "",
-    "semester": "WINTER"
   }
 ];
