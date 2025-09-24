@@ -150,3 +150,4 @@ const COURSES_CORE1 = [
     "semester": "FALL"
   }
 ];
+
