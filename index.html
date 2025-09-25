@@ -17,6 +17,7 @@
 <script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan/courses_full.js?v=2"></script>
 <script src="https://cdn.jsdelivr.net/gh/myoussefabdalla-ui/Study-Plan/default_plans.js"></script>
   
+
 <style>
   :root{
     --sidebar-w:320px;
@@ -442,10 +443,54 @@ function attemptPlaceCourse(code,semNum){
   return true;
 }
 
-function removeCourseFromSemester(code,semNum){
-  const arr=plan[semNum-1];
-  const idx=arr.indexOf(code);
-  if(idx!==-1){ arr.splice(idx,1); refreshSemester(semNum); renderCourseList();   updateTotalCredits(); checkProgramRequirements(); }
+function removeCourseFromSemester(code, semNum) {
+  const arr = plan[semNum - 1];
+  const idx = arr.indexOf(code);
+  if (idx !== -1) {
+    arr.splice(idx, 1);
+
+    // --- NEW: recursively remove dependent courses ---
+    removeDependentCourses(code, semNum);
+
+    refreshSemester(semNum);
+    renderCourseList();  // <-- ensures removed courses reappear
+    checkProgramRequirements();
+    updateTotalCredits();
+  }
+}
+
+/**
+ * Recursively remove courses that depend on the removed course
+ */
+function removeDependentCourses(removedCode, fromSem) {
+  for (let s = fromSem; s <= NUM_SEM; s++) {
+    const courses = [...plan[s - 1]]; // clone because we’ll modify
+    for (const code of courses) {
+      const c = courseMap[code];
+      if (!c) continue;
+
+      // If the removed course is a prerequisite
+      if ((c.prereqs || []).includes(removedCode)) {
+        // Remove it
+        plan[s - 1] = plan[s - 1].filter(cd => cd !== code);
+
+        // Show warning
+        showMessage(
+          `⚠️ ${code} was removed from Semester ${s} because it depends on ${removedCode}.`,
+          true
+        );
+
+        // Refresh that semester immediately
+        refreshSemester(s);
+
+        // Make sure sidebar list is updated
+        renderCourseList();
+
+        // Recurse further: this removal may cause chain reactions
+        removeDependentCourses(code, s);
+      }
+    }
+  }
 }
 function isCoursePlaced(code){ return plan.some(s=>s.includes(code)); }
 function findCourseSemester(code){ for(let i=0;i<NUM_SEM;i++) if(plan[i].includes(code)) return i+1; return -1; }
@@ -648,11 +693,3 @@ document.getElementById('categorySelect').addEventListener('change', renderCours
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
