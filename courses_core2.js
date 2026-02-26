@@ -64,7 +64,7 @@ const COURSES_CORE2 = [
     "name": "Linear Systems",
     "credits": 3,
     "category": "Core",
-    "prereqs": ["MTHG102"],
+    "prereqs": ["MTHG103"],
     "description": "Linear Continuous Systems – Modeling of Dynamic Systems – Transfer Functions – Steady-State Behavior – Transient Response of first, integrating, second-order and higher-order systems – Block Diagram Reduction Techniques – Stability – Routh Stability Criterion – Analysis of Systems in State-Space.",
     "textbook": "F. Golnaraghi and B. C. Kuo, Automatic Control Systems, 10th Edition, McGraw-Hill Education, 2017",
     "semester": "FALL"
@@ -120,3 +120,4 @@ const COURSES_CORE2 = [
     "semester": "BOTH"
   }
 ];
+
