@@ -94,7 +94,7 @@ const COURSES_CORE1 = [
     "name": "Analysis of Continuous and Discrete-Time Signals",
     "credits": 4,
     "category": "Core",
-    "prereqs": ["MTHG102"],
+    "prereqs": ["MTHG103"],
     "description": "Introduction to Signal Analysis – Basic System Properties – Linear time-invariant Systems – Fourier Series analysis – Fourier Transform and Signal Spectrum – Sampling Theorem – Introduction to Communication Systems – Introduction to discrete-time Systems – Fourier Series Analysis – Discrete-time Fourier transform – DFT – Z-transform.",
     "textbook": "A. V. Oppenheim and Alan S. Willsky, Signals and Systems (2nd Ed.), Prentice Hall, 1997",
     "semester": "FALL"
@@ -150,4 +150,5 @@ const COURSES_CORE1 = [
     "semester": "FALL"
   }
 ];
+
 
