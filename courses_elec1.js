@@ -14,9 +14,10 @@ const COURSES_ELEC1 = [
     "name": "Heat transfer and Cooling in Electronics",
     "credits": 3,
     "category": "FacultyRequirement",
-    "prereqs": ["PHY001"],
+    "prereqs": ["PHYG001"],
     "description": "Introduction – Basics of thermodynamics– Conduction – Convection – Radiation – Electronics Cooling Methods – Heat sinks – Data centre cooling – Basics of thermal management of electronics – Design methods",
     "textbook": "",
     "semester": "SPRING"
   }
 ];
+
